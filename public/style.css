@@ -1,0 +1,77 @@
+/* public/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.chat {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat h1 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.msg h2 {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    color: #555;
+}
+
+.chat h1, .msg h2 {
+    margin-bottom: 10px;
+}
+
+.chat h1:first-of-type {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.msg h2 {
+    font-size: 16px;
+    font-style: italic;
+    color: #777;
+}
+
+.chat .msg {
+    margin-left: 20px;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.green{
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #28df99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.msg{
+    display:flex;
+}
+.btn{
+    border: none;
+    border-radius: 8px;
+}
+.bdy{
+    margin-left:10px;
+}
+.icons{
+    display:flex;
+}

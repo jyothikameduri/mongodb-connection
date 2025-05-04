@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <form method="GET" action="/chats/new">
+        <button class="green"> new chat</button>
+    </form>
+    <% for(let chat of chats){ %>
+        <div class="chat">
+            <div class="head">
+                <h1>from: <%=chat.from%></h1>
+                <p><%= chat.created_at.toString().split(" ")[4] %></p>
+            </div>
+            <div class="msg">
+                <h2>msg: <%=chat.msg%></h2>
+            </div>
+            <h1>to: <%=chat.to%></h1>
+            <div class="icons">
+                <form method="GET" action="/chats/<%= chat._id %>/edit">
+                    <button class="btn"><i class="fa-solid fa-pen-to-square"></i></button>&nbsp;&nbsp;
+                </form>
+                <form method="POST" action="/chats/<%=chat._id%>?_method=DELETE">
+                    <button class="btn"><i class="fa-solid fa-trash"></i></button>
+                </form>  
+            </div>
+        </div>
+    <% } %>
+</body>
+</html>
